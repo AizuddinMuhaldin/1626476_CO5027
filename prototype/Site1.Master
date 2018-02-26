@@ -4,8 +4,8 @@
 
 <html>
 <head runat="server">
-    <title>Palladium Boots</title>
-    <link rel="stylesheet" href="CSS/Style.css" type="text/css" />
+    <title>Palladium Bootsssssss</title>
+    <link rel="stylesheet" href="~/CSS/Style.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
