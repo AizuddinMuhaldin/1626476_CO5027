@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="prototype.admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<title>Palladium Bootsssssss</title>
+    <link rel="stylesheet" href="CSS/admin.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <style>
+      
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <div id="wrapper">
+                <div id="banner">
+
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner2.png"/>
+
+                </div>
+
+                 <div class="login">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut1" />
+                    <asp:LoginName ID="LoginName1" runat="server" />
+                    </div>
+
+              <div>
+                    <ul id="nav">
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/admin/index.aspx">Home</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Product.aspx">Edit</asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx">Log-out</asp:HyperLink>
+                        </li>
+                       
+                        
+                    </ul>
+                  <br />
+                  <br />
+                </div>  <div id="content">
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                       </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+          
+        </div>
+    </form>
+</body>
+</html>

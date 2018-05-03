@@ -13,5 +13,20 @@ namespace prototype
         {
 
         }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
+
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
+
+        protected void SqlDataSource1_Selecting1(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }

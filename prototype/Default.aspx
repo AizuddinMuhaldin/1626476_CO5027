@@ -4,50 +4,34 @@
      <link rel="stylesheet" href="CSS/DefaultCSS.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="wrap"></div>
-    <div id="columns" class="columns_4">
-        <figure>
-            <img src="Images/Products/rp1.jpg" />
-            <figcaption>boots1</figcaption>
-            <span class="price">$350</span>
-            <a class="button" href="#">Buy Now</a>
-        </figure>
+    <section id="content">
+        
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+        
+        <HeaderTemplate><div></HeaderTemplate>
+            <ItemTemplate>
+                <div class="rptrProduct">
+                    <a href="<%# Eval ("ProductId", "Product.aspx?Id={0}") %>">
+                        <div>
+                            <asp:Image ID="displayProductImage" runat="server" Height="200px" ImageUrl='<%# Eval("ProductImage") %>' Width="200px" AlternateText='<%# Eval("ProductName") %>' />
 
-        <figure>
-           <img src="Images/Products/rp2.jpg" />
-            <figcaption>boots2</figcaption>
-            <span class="price">$235</span>
-            <a class="button" href="#">Buy Now</a>
-        </figure>
-
-        <figure>
-            <img src="Images/Products/rp3.jpg" />
-            <figcaption>boots3</figcaption>
-            <span class="price">$400</span>
-            <a class="button" href="#">Buy Now</a>
-        </figure>
-
-        <figure>
-            <img src="Images/Products/rp4.jpg" />
-            <figcaption>boots4</figcaption>
-            <span class="price">$190</span>
-            <a class="button" href="#">Buy Now</a>
-        </figure>
-
-        <figure>
-            <img src="Images/Products/rp5.jpg" />
-            <figcaption>boots5</figcaption>
-            <span class="price">$470</span>
-            <a class="button" href="#">Buy Now</a>
-        </figure>
-
-        <figure>
-            <img src="Images/Products/rp6.jpg" />
-            <figcaption>boots6</figcaption>
-            <span class="price">$250</span>
-            <a class="button" href="#">Buy Now</a>
-        </figure>
-
-
-    </div>
+                        </div>
+                        <div><%# Eval ("ProductName") %></div>
+                        <div><asp:Label ID="lblProductPrice" runat="server" Text="$"></asp:Label><%# Eval ("ProductPrice") %></div>
+                        <div><asp:Label ID="lblProductQty" runat="server" Text="Qty: "></asp:Label><%# Eval ("ProductQuantity") %></div>
+                    </a>
+                </div>
+            </ItemTemplate>
+            <FooterTemplate></div></FooterTemplate>
+        
+        
+        
+        
+        
+        </asp:Repeater>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626476_hotelsConnectionString %>" SelectCommand="SELECT * FROM [tblProduct]" OnSelecting="SqlDataSource1_Selecting1"></asp:SqlDataSource>
+    <br />
+    <br />
+    <br />
+      </section>
 </asp:Content>
