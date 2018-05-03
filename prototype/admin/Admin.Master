@@ -37,12 +37,7 @@
                         <li>
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/admin/index.aspx">Home</asp:HyperLink>
                         </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Product.aspx">Edit</asp:HyperLink>
-                        </li>
-                        <li>
-                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx">Log-out</asp:HyperLink>
-                        </li>
+                       
                        
                         
                     </ul>

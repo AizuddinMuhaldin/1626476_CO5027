@@ -4,17 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace prototype.admin
 {
     public partial class Edit : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void FormView1_PageIndexChanging(object sender, FormViewPageEventArgs e)
         {
 
         }
@@ -30,14 +27,18 @@ namespace prototype.admin
                     file.SaveAs(Server.MapPath("~/Images/" + file.FileName));
                     Label saveProduct = (Label)FormView1.FindControl("lblSave") as Label;
                     saveProduct.Text = "~/Images/" + file.FileName;
-                    Literal1.Text = "File successfully uploaded";
+                    LitImg.Text = "File successfully uploaded";
                 }
                 else
                 {
-                    Literal1.Text = "invalid image file type";
+                    LitImg.Text = "invalid image file type";
                 }
-
             }
+        }
+
+        protected void FormView1_PageIndexChanging1(object sender, FormViewPageEventArgs e)
+        {
+
         }
     }
 }

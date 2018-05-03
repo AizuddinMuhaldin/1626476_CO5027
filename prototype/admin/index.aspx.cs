@@ -19,22 +19,25 @@ namespace prototype.admin
 
         }
 
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+                FileUpload file = (FileUpload)FormView1.FindControl("FileUpload1") as FileUpload;
+                if (file.HasFile)
+                {
+                    file.SaveAs(Server.MapPath("~/Images/" + file.FileName));
+                    Label saveProduct = (Label)FormView1.FindControl("Label1") as Label;
+                    saveProduct.Text = "~/Images/" + file.FileName;
+
+                }
+            
+        }
 
 
 
 
 
-        //protected void LinkButton1_Click(object sender, EventArgs e)
-        //{
-        //    FileUpload file = (FileUpload)FormView1.FindControl("FileUpload1") as FileUpload;
-        //    if (file.HasFile)
-        //    {
-        //        file.SaveAs(Server.MapPath("~/Images/" + file.FileName));
-        //        Label saveProduct = (Label)FormView1.FindControl("Label1") as Label;
-        //        saveProduct.Text = "~/Images/" + file.FileName;
 
-        //    }
-        //}
+       
 
     }
 }
