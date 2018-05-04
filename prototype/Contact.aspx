@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
-    <p>Fill in the form below and we'll get back to you within 24 hours.</p>
+    <p>Fill in the form below </p>
             <p>Thank you in advance for your feedback.</p>
     
     
@@ -16,12 +16,12 @@
 					
 			     <h1>Feedback</h1>
     <p>Please contact us</p>
-    <div class="det"><i class="fa fa-map-marker"></i> Roof Top, Plaza Abdul Razak,
+    <div class="det"><i class="mapIndicator"></i> The Mall
 
-Jalan Laksamana Abdul Razak, Bandar Seri Begawan
+The Mall Gadong, Bandar Seri Begawan
 
 Negara Brunei Darussalam</div>
-    <div class="det"><i class="fa fa-phone"></i> 0011223344</div>
+    <div class="det"><i class="mapIndicatorBox"></i> +673-8764567 </div>
  <asp:Label ID="lblName" runat="server" Text="Name:" class="style-label" AssociatedControlID="textName"></asp:Label>
             <p><asp:RequiredFieldValidator ID="reqNameValidator" runat="server" ErrorMessage="*Required" ControlToValidate="textName" class="validation" ValidationGroup="validatedControls" ></asp:RequiredFieldValidator>
             <asp:TextBox ID="textName" runat="server" placeholder="Name is required" class="style-input" TabIndex="1"></asp:TextBox>
@@ -56,7 +56,7 @@ Negara Brunei Darussalam</div>
       function initMap() {
           
               
-              var collegeLatLng = { lat: 4.885731, lng: 114.931669 };
+              var collegeLatLng = { lat: 4.905522, lng: 114.916767 };
               var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 19,
                   center: collegeLatLng
@@ -65,9 +65,9 @@ Negara Brunei Darussalam</div>
               var contentString1 = '<div id="content">' +
                   '<div id="siteNotice">' +
                   '</div>' +
-                  '<h1 id="firstHeading" class="firstHeading">Laksamana College of Business</h1>' +
+                  '<h1 id="firstHeading" class="firstHeading">Palladium Boots Store</h1>' +
                   '<div id="bodyContent">' +
-                  '<p><b>College located here!</b></p>' +
+                  '<p><b>Store located here!</b></p>' +
                   '</div>' +
                   '</div>';
               
@@ -79,7 +79,7 @@ Negara Brunei Darussalam</div>
               var marker1 = new google.maps.Marker({
                   position: collegeLatLng,
                   map: map,
-                  title: 'Laksamana College of Business'
+                  title: 'The Mall Gadong'
               });
               marker1.addListener('click', function () {
                   infowindow1.open(map, marker1);

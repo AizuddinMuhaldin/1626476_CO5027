@@ -7,7 +7,7 @@
     
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductId" DataSourceID="SqlDataSource1" DefaultMode="Edit" OnPageIndexChanging="FormView1_PageIndexChanging1">
         <EditItemTemplate>
-            <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("ProductImage") %>' height="200px" Width="200px"/>
+            <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("ProductImage") %>' CssClass="ImageSize"/>
             <br />
             <br />
             ProductId:

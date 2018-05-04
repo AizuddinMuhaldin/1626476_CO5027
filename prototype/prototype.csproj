@@ -167,7 +167,6 @@
     <Content Include="admin\Edit.aspx" />
     <Content Include="admin\Images\pallabosse_mid.png" />
     <Content Include="admin\index.aspx" />
-    <Content Include="admin\testing.aspx" />
     <Content Include="CompletePurchase.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -176,6 +175,7 @@
     <Content Include="CSS\Contact.css" />
     <Content Include="CSS\DefaultCSS.css" />
     <Content Include="CSS\Login.css" />
+    <Content Include="CSS\Register.css" />
     <Content Include="CSS\Style.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -267,13 +267,6 @@
     </Compile>
     <Compile Include="admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\testing.aspx.cs">
-      <DependentUpon>testing.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\testing.aspx.designer.cs">
-      <DependentUpon>testing.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

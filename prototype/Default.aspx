@@ -10,12 +10,12 @@
         
         <HeaderTemplate><div></HeaderTemplate>
             <ItemTemplate>
-                <div class="rptrProduct">
+                <div class="repeaterBox">
                     <a href="<%# Eval ("ProductId", "Product.aspx?Id={0}") %>">
                         <div>
-                            <asp:Image ID="displayProductImage" runat="server" Height="200px" ImageUrl='<%# Eval("ProductImage") %>' Width="200px" AlternateText='<%# Eval("ProductName") %>' />
+                            <asp:Image ID="displayProductImage" runat="server"  ImageUrl='<%# Eval("ProductImage") %>' CssClass="ImageSize" AlternateText='<%# Eval("ProductName") %>' />
 
-                        </div>
+                        <%--</div>--%>
                         <div><%# Eval ("ProductName") %></div>
                         <div><asp:Label ID="lblProductPrice" runat="server" Text="$"></asp:Label><%# Eval ("ProductPrice") %></div>
                         <div><asp:Label ID="lblProductQty" runat="server" Text="Qty: "></asp:Label><%# Eval ("ProductQuantity") %></div>

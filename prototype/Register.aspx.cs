@@ -44,7 +44,7 @@ namespace prototype
             }
             else
             {
-                litRegisterError.Text = "There is an error with the registration" + result.Errors.FirstOrDefault();
+                litRegisterError.Text = "The registration has failed" + result.Errors.FirstOrDefault();
             }
         }
     }

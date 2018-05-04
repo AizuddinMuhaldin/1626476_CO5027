@@ -20,7 +20,7 @@
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ProductImage") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("ProductImage") %>' Width="200px" Height="200px" DataField="ProductPrice"/>
+                    <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("ProductImage") %>' CssClass="ImageSize1" Height="200px" Width="200px" DataField="ProductPrice"/>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" />

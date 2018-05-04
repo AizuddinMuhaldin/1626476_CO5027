@@ -39,23 +39,23 @@ namespace prototype
             Label productPrice = (Label)FormView1.FindControl("ProPriceLbl");
             Label prodID = (Label)FormView1.FindControl("ProImageLbl");
             decimal shippingPackagingCost = 5.00m;
-            int proPrice1;// = (int) productPrice;
+            int proPrice1;
             int.TryParse((string)productPrice.Text, out proPrice1);
                 int qtyOfProducts = int.Parse(DDLProductQty.SelectedValue);
             decimal subTotal = (qtyOfProducts * proPrice1);
             decimal totalAmount = subTotal + shippingPackagingCost;
 
-            //Authenticate with PayPal
+            
             var config = ConfigManager.Instance.GetProperties();
             var accessToken = new OAuthTokenCredential(config).GetAccessToken();
-            //Get APIContext Object
+            
             var apiContext = new APIContext(accessToken);
 
             var productStock = new Item();
             productStock.name = "Products";
             productStock.currency = "SGD";
             productStock.price = proPrice1.ToString();
-            productStock.sku = prodID.Text; //sku is stock keeping unit e.g. manufacturer code
+            productStock.sku = prodID.Text; 
             productStock.quantity = qtyOfProducts.ToString();
 
 
@@ -72,7 +72,7 @@ namespace prototype
 
             var transaction = new Transaction();
             transaction.description = "Orders from Palladium Boots";
-            transaction.invoice_number = Guid.NewGuid().ToString(); // this should ideally be the id of a record storing the order
+            transaction.invoice_number = Guid.NewGuid().ToString(); 
             transaction.amount = transactionAmount;
             transaction.item_list = new ItemList
             {
@@ -104,7 +104,7 @@ namespace prototype
                 {
                     if (link.rel.ToLower().Trim().Equals("approval_url"))
                     {
-                        //found the appropriate link, send the user there
+                        
                         Response.Redirect(link.href);
                     }
                 }

@@ -23,7 +23,10 @@
         height: auto;
     }
 
-
+.ImageSize1 {
+    height: 200px;
+    width: 200px;
+}
 
 #nav ul {
     display: none;
@@ -63,3 +66,13 @@
     padding: 20px;
     min-height: 400px;
 }
+
+.BoxFooter {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    margin: 2% 0;
+    clear: both;
+    padding: 0;
+}
+

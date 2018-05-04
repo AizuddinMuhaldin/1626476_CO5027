@@ -3,6 +3,7 @@
     font-family: Corbel, Arial, Helvetica, sans-serif;
     font-size: 16px;
     background-color: lavender;
+    
 }
 
 #wrapper {
@@ -11,12 +12,10 @@
     padding-bottom: 20px;
     background-color: white;
     border: 1px solid black;
+    height: 100%;
 }
 
-#banner {
 
-
-}
 
     #banner img {
         display: block;
@@ -27,22 +26,10 @@
     }
 
 
-
-/*#navigation {
-    height: 45px;
-    background: linear-gradient(to top, #c2bcb5, #ffffff);
+.ImageSize {
+   height:200px;
+   width:200px;
 }
-
-#nav {
-    display: block;
-    list-style: none;
-    text-align: center;
-}*/
-
-    #nav ul {
-        display: none;
-        list-style: none;
-    }
 
 #nav li {
     float: left;
@@ -50,7 +37,7 @@
     margin-left: 50px;
     margin-top: 15px;
     text-transform: uppercase;
-    padding: 0 15px 0 30px;
+    padding: 0 38px 0 50px;
     border-left: 2px solid black;
     border-right: 2px solid black;
     text-align:center;
@@ -75,4 +62,13 @@
     margin-top: 30px;
     padding: 20px;
     min-height: 400px;
+}
+
+.BoxFooter {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    margin: 2% 0;
+    clear: both;
+    padding: 0;
 }

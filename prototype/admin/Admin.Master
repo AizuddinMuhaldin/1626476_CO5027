@@ -51,6 +51,26 @@
             </div>
           
         </div>
+        <footer class="BoxFooter">
+		<p>Copyright &copy; 1626476/J39676</p>
+		
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img src="http://jigsaw.w3.org/css-validator/images/vcss"
+            	alt="Valid CSS!" class="valid" />
+			</a>
+
+	
+		
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+				alt="Valid CSS!" class="valid" />
+			</a>
+                <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> 
+                |
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> 
+                | <a href="admin/index.aspx">Admin</a>
+		
+	</footer>
     </form>
 </body>
 </html>
